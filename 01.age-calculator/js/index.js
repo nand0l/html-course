@@ -3,21 +3,16 @@ const birthdayEl= document.getElementById("birthday")
 const resultEl=document.getElementById("result")
 
 function calculateAgeYear(){
-    console.log("Clicked")
     const birthdayValue=birthdayEl.value
     if(birthdayValue === ""){
         alert("Please enter your birthday")
         return
     }else{
         const ageYear = getAgeYear(birthdayValue)
-        console.log(ageYear)
         resultEl.innerText=`Your age is ${ageYear} ${ageYear>1?"years":"year"} old`
         
     
     }
-
-    console.log(birthdayValue)
-
 }
 
 function getAgeYear(birthdayValue){
@@ -31,6 +26,5 @@ function getAgeYear(birthdayValue){
     return ageYear;
     
 }
-
 
 btnEl.addEventListener("click", calculateAgeYear)
